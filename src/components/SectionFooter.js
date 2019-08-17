@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { ReactComponent as IconGithub } from '../assets/images/github.svg'
-import { ReactComponent as IconCodepen } from '../assets/images/codepen.svg'
+import { ReactComponent as IconGithub } from 'assets/images/github.svg'
+import { ReactComponent as IconCodepen } from 'assets/images/codepen.svg'
 
 const Container = styled('div')`
     position: relative;

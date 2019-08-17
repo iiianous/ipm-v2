@@ -1,10 +1,10 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-import { ReactComponent as IconTwitter } from '../../assets/images/twitter.svg'
-import { ReactComponent as IconLinkedIn } from '../../assets/images/linkedin.svg'
-import { ReactComponent as IconEmail } from '../../assets/images/email.svg'
-import { ReactComponent as IconArrowDown } from '../../assets/images/arrow_down.svg'
+import { ReactComponent as IconTwitter } from 'assets/images/twitter.svg'
+import { ReactComponent as IconLinkedIn } from 'assets/images/linkedin.svg'
+import { ReactComponent as IconEmail } from 'assets/images/email.svg'
+import { ReactComponent as IconArrowDown } from 'assets/images/arrow_down.svg'
 import BigHeader from '../BigHeader'
 
 const Container = styled('div')`

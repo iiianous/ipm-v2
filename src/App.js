@@ -1,9 +1,9 @@
 import React from 'react';
 
-import SectionHero from './components/SectionHero/'
-import SectionWork from './components/SectionWork/'
-import SectionAbout from './components/SectionAbout'
-import SectionFooter from './components/SectionFooter'
+import SectionHero from 'components/SectionHero/'
+import SectionWork from 'components/SectionWork/'
+import SectionAbout from 'components/SectionAbout'
+import SectionFooter from 'components/SectionFooter'
 
 class App extends React.Component {
   constructor (props) {

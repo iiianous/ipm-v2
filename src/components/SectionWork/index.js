@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 import SubHead from '../SubHead'
 import Text from '../Text'
-import work_1 from '../../assets/images/work_1.png'
-import work_2 from '../../assets/images/work_2.png'
+import work_1 from 'assets/images/work_1.png'
+import work_2 from 'assets/images/work_2.png'
 
 const Container = styled('div')`
   display: flex;

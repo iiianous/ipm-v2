@@ -94,10 +94,10 @@ const IconBox = styled('div')`
   }
 `
 
-function SectionHero (props) {
+const SectionHero = props => {
   let { calculate, scrollto } = props
 
-  function onScrollTo () {
+  const onScrollTo = () => {
     const about = document.querySelector('.section-about')
     console.log('element: ' ,about)
 
@@ -111,17 +111,17 @@ function SectionHero (props) {
   return (
     <Container className="section-about">
       <IconWrapper>
-        <a href="//twitter.com/iiianous" target="_blank">
+        <a href="//twitter.com/iiianous" target="_blank" alt="Twitter">
           <IconBox>
             <IconTwitter />
           </IconBox>
         </a>
-        <a href="mailto:ianmostar@gmail.com?subject = Hello">
+        <a href="mailto:ianmostar@gmail.com?subject = Hello" alt="Email">
           <IconBox>
             <IconEmail />
           </IconBox>
         </a>
-        <a href="//www.linkedin.com/in/ian-mostar-55431498/" target="_blank">
+        <a href="//www.linkedin.com/in/ian-mostar-55431498/" target="_blank" alt="LinkedIn">
           <IconBox>
               <IconLinkedIn />
           </IconBox>

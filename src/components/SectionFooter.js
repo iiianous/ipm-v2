@@ -56,7 +56,7 @@ const IconBox = styled('div')`
   cursor: pointer;
 `
 
-function SectionFooter () {
+const SectionFooter = () => {
     return (
         <Container>
             <IconWrapper>
@@ -71,7 +71,7 @@ function SectionFooter () {
                     </IconBox>
                 </a>
             </IconWrapper>
-            <p>Crafted in Pilipinas. <br />© 2019</p>
+            <p>Las Islas Filipinas. <br />© 2019</p>
             <div className="lining"></div>
         </Container>
     )

@@ -53,19 +53,19 @@ const Figure = styled('figure')`
   }
 `
 
-function SectionWork () {
+const SectionWork = () => {
   return (
     <Container>
       <SubHead>
         works
       </SubHead>
       <Figure>
-        <img src={work_1} alt=""/>
+        <img src={work_1} alt="Psalm23 Basketball Academy" />
         <h3>Psalm23 Basketball Academy</h3>
         <Text>Brochure type website for Basketball enthusiast. </Text>
       </Figure>
       <Figure>
-        <img src={work_2} alt=""/>
+        <img src={work_2} alt="Balance Spa and Wellness" />
         <h3>Balance Spa and Wellness</h3>
         <Text>Hypothetical website for a wellness spa.</Text>
       </Figure>

@@ -21,7 +21,7 @@ const Container = styled('div')`
   }
 `
 
-function SectionAbout () {
+const SectionAbout = () => {
   return (
     <Container>
       <SubHead>
@@ -34,7 +34,7 @@ function SectionAbout () {
         I mainly work with a team, developing admin, dashboard type pages and various type of applications. Most of the time developing user interfaces, integrating RESTful APIs and new features making sure it is adaptive to modern devices, browsers and in-line with current web stardards.
         <br />
         <br />
-        At the moment, I'm developing frontend experiences using Vue.js, React.js, TailwindCSS, Javascript, CSS3 and HTML5.
+        At the moment, I'm developing frontend experiences using Vue.js, Vuex, React.js, Redux, Javascript, TailwindCSS, CSS3/SCSS/HTML5.
         <br />
         <br />
         You'll find me on <a href="//twitter.com/iiianous" target="_blank">Twitter</a>, dabbling latest and hot-picking design and web development posts around.

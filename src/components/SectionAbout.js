@@ -28,10 +28,10 @@ const SectionAbout = () => {
         about
       </SubHead>
       <Text>
-        I'm Ian Mostar, from Cebu, Philippines. I have been working in web development for 5 years. The first 2 years, I mostly work as a web & mobile UI designer until I've transitioned more into a front-end developer role creating websites for small businesses using custom Wordpress CMS.
+        I'm Ian Mostar, based in Cebu, Philippines. I have been working in web development for 5 years. The first 2 years, I mostly work as a web & mobile UI designer until I've transitioned more into a front-end developer role creating websites for small businesses using custom Wordpress CMS.
         <br />
         <br />
-        I mainly work with a team, developing admin, dashboard type pages and various type of applications. Most of the time developing user interfaces, integrating RESTful APIs and new features making sure it is adaptive to modern devices, browsers and in-line with current web stardards.
+        I work with a team developing various types of web applications.
         <br />
         <br />
         At the moment, I'm developing frontend experiences using Vue.js, Vuex, React.js, Redux, Javascript, TailwindCSS, CSS3/SCSS/HTML5.

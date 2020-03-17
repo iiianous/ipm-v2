@@ -71,7 +71,7 @@ const SectionFooter = () => {
                     </IconBox>
                 </a>
             </IconWrapper>
-            <p>Las Islas Filipinas. <br />© 2019</p>
+            <p>Las Islas Filipinas. <br />© 2020</p>
             <div className="lining"></div>
         </Container>
     )

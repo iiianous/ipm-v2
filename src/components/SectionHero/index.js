@@ -121,7 +121,7 @@ const SectionHero = props => {
             <IconEmail />
           </IconBox>
         </a>
-        <a href="//www.linkedin.com/in/ian-mostar-55431498/" target="_blank" alt="LinkedIn">
+        <a href="//www.linkedin.com/in/ianmostar" target="_blank" alt="LinkedIn">
           <IconBox>
               <IconLinkedIn />
           </IconBox>

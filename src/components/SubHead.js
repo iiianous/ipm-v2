@@ -9,11 +9,11 @@ const SubHead = styled.h1`
   line-height: .95;
   align-self: center;
   letter-spacing: -0.01em;
-  border-bottom: 10px solid yellow;
+  border-bottom: 10px solid #f3dc1d;
   padding-bottom: 6px;
 
   @media screen and ( min-width: 600px ) {
-    border-bottom: 12px solid yellow;
+    border-bottom: 12px solid #f3dc1d;
     padding-bottom: 8px;
   }
 

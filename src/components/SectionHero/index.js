@@ -19,11 +19,11 @@ const UpperDiv = styled('div')`
   width: 100%;
   position: absolute;
   height: 50%;
-  background-color: yellow;
+  background-color: #f3dc1d;
   bottom: 0;
 
   ${ props => props.primary && css`
-    background: yellow;
+    background: #f3dc1d;
     color: black;
   `}
 `;

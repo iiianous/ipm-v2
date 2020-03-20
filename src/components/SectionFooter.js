@@ -10,7 +10,7 @@ const Container = styled('div')`
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    background: yellow;
+    background: #f3dc1d;
     line-height: 1.4;
     font-family: 'Lato', sans-serif;
     padding: 4.5em 0;

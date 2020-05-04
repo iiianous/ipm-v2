@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import pdf_src from 'assets/images/ianmostar_resume.pdf'
 
 import SubHead from './SubHead'
 import Text from './Text'
@@ -12,6 +11,15 @@ const Container = styled('div')`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background: var(--primary-color);
+
+  p {
+    color: var(--font-color);
+  }
+
+  h1 {
+    color: var(--font-color);
+  }
 
   @media screen and ( min-width: 600px ) {
     padding: 0 15%;
@@ -25,9 +33,7 @@ const Container = styled('div')`
 const SectionAbout = () => {
   return (
     <Container>
-      <SubHead>
-        about
-      </SubHead>
+      <SubHead>about</SubHead>
       <Text>
         I'm Ian Mostar, based in Cebu, Philippines. I have been working in web development for 5 years. The first 2 years, I mostly work as a web & mobile UI designer. I've transitioned more into a front-end developer creating small business websites using custom Wordpress CMS.
         <br />
@@ -38,9 +44,10 @@ const SectionAbout = () => {
         I create frontend experiences using Vue.js/Vuex, React.js/Redux, Javascript, TailwindCSS, CSS3/SCSS/HTML5.
         <br />
         <br />
-        You'll find me on <a href="//twitter.com/iiianous" target="_blank">Twitter</a>, hot-picking design and web development posts around.
+        You'll find me on <a href="//twitter.com/iiianous" target="_blank" rel="noopener noreferrer">Twitter</a>, hot-picking design and web development posts around.
       </Text>
     </Container>
-  )}
+  );
+}
 
-export default SectionAbout
+export default SectionAbout;

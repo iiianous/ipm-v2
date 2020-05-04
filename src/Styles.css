@@ -1,0 +1,21 @@
+:root {
+    --primary-color: white;
+    --highlight-color: #f3dc1d;
+    --font-color: #131313;
+    --link-color: #759bec;
+}
+
+[data-theme="dark"] {
+    --primary-color: #16161e;
+    --highlight-color: #1a1b26;
+    --font-color: #9ea6cb;
+    --link-color: #759bec;
+}
+
+body {
+    background-color: var(--primary-color);
+}
+
+a {
+    color: var(--link-color);
+}

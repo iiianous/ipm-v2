@@ -13,8 +13,8 @@ const Container = styled('div')`
     background: #f3dc1d;
     line-height: 1.4;
     font-family: 'Lato', sans-serif;
-    padding: 4.5em 0;
-    margin-top: 10em;
+    padding: 7em 0;
+    background: var(--highlight-color);
 
     * {
         margin: 0;
@@ -23,11 +23,16 @@ const Container = styled('div')`
 
     p {
         text-align: center;
+        color: var(--font-color);
+    }
+
+    h1 {
+        color: var(--font-color);
     }
 
     .lining {
         height: 12px;
-        background: yellow;
+        background: var(--highlight-color);
         width: 100%;
         position: absolute;
         bottom: 0;
@@ -51,21 +56,22 @@ const IconBox = styled('div')`
   padding: 8px;
   position: relative;
   margin: 0 10px;
-  border: 4px solid black;
+  border: 4px solid var(--font-color);
   border-radius: 100%;
   cursor: pointer;
+  fill: var(--font-color);
 `
 
 const SectionFooter = () => {
     return (
         <Container>
             <IconWrapper>
-                <a href="//github.com/iiianous" target="_blank">
+                <a href="//github.com/iiianous" target="_blank" rel="noopener noreferrer">
                     <IconBox>
                         <IconGithub className="icon-github"/>
                     </IconBox>
                 </a>
-                <a href="//codepen.io/iiianous" target="_blank">
+                <a href="//codepen.io/iiianous" target="_blank" rel="noopener noreferrer">
                     <IconBox>
                         <IconCodepen />
                     </IconBox>
@@ -74,7 +80,7 @@ const SectionFooter = () => {
             <p>Las Islas Filipinas. <br />© 2020</p>
             <div className="lining"></div>
         </Container>
-    )
+    );
 }
 
-export default SectionFooter
+export default SectionFooter;

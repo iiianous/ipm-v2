@@ -1,53 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import SectionHero from 'components/SectionHero/'
 import SectionWork from 'components/SectionWork/'
 import SectionAbout from 'components/SectionAbout'
 import SectionFooter from 'components/SectionFooter'
 
-class App extends React.Component {
-  constructor (props) {
-    super(props);
-    this.onScrollHandle = this.onScrollHandle.bind(this)
+function App() {
+  const [calculate, setCalculate] = useState(0);
 
-    this.state = {
-      calculate: 0
-    }
-  }
+  useEffect(() => {
+    onScrollHandle();
+  }, []);
 
-  onScrollHandle () {
+  const onScrollHandle = () => {
     window.addEventListener('scroll', () => {
       let calc;
 
       if ( window.scrollY < 600)
-        calc = (window.scrollY / 10.2) + `%`
+        calc = (window.scrollY / 10.2) + `%`;
 
-      this.setState( () => ({calculate: calc}) )
-      // const docHeight = document.documentElement.offsetHeight;
-    })
+      setCalculate(calc);
+    });
   }
 
-  componentDidMount () {
-    this.onScrollHandle()
+  let overflow = {
+    overflow: 'hidden'
   }
 
-  render () {
-    let overflow = {
-      overflow: 'hidden'
-    }
-
-    return (
-      <div style={overflow}>
-        <SectionHero
-          calculate={this.state.calculate}
-          scrollto={this.onScrollTo}
-        />
-        <SectionAbout />
-        <SectionWork />
-        <SectionFooter />
-      </div>
-    )
-  }
+  return (
+    <div style={overflow}>
+      <SectionHero calculate={calculate} />
+      <SectionAbout />
+      <SectionWork />
+      <SectionFooter />
+    </div>
+  );
 }
 
 export default App;

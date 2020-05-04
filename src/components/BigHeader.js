@@ -12,6 +12,7 @@ const BigHeader = styled('h1')`
   text-transform: uppercase;
   top: -1px;
   position: relative;
+  color: var(--font-color);
 
   @media only screen and ( min-width: 600px) {
     font-size: 5.2rem;
@@ -33,4 +34,4 @@ const BigHeader = styled('h1')`
   }
 `;
 
-export default BigHeader
+export default BigHeader;

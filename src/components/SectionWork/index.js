@@ -12,13 +12,22 @@ const Container = styled('div')`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  background-color: var(--primary-color);
+
+  p {
+    color: var(--font-color);
+  }
+
+  h1, h2, h3 {
+    color: var(--font-color);
+  }
 
   @media screen and ( min-width: 600px ) {
-    padding: 0 15%;
+    padding: 4rem 15%;
   }
 
   @media screen and ( min-width: 768px ) {
-    padding: 0 20%;
+    padding: 6rem 20%;
   }
 `
 const Figure = styled('figure')`

@@ -56,7 +56,7 @@ const IconBox = styled('div')`
   padding: 8px;
   position: relative;
   margin: 0 10px;
-  border: 4px solid var(--font-color);
+  border: var(--border-width) solid var(--font-color);
   border-radius: 100%;
   cursor: pointer;
   fill: var(--font-color);

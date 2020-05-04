@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
 
 import { ReactComponent as IconTwitter } from 'assets/images/twitter.svg'
@@ -6,6 +6,7 @@ import { ReactComponent as IconLinkedIn } from 'assets/images/linkedin.svg'
 import { ReactComponent as IconEmail } from 'assets/images/email.svg'
 import { ReactComponent as IconArrowDown } from 'assets/images/arrow_down.svg'
 import { ReactComponent as IconDark } from 'assets/images/dark.svg'
+import { ReactComponent as IconDay } from 'assets/images/day.svg'
 import BigHeader from '../BigHeader'
 
 const Container = styled('div')`
@@ -32,7 +33,7 @@ const UpperDiv = styled('div')`
 const GoDown = styled('div')`
   width: 30px;
   height: 30px;
-  border: 5px solid var(--font-color);
+  border: var(--border-width) solid var(--font-color);
   padding: 8px;
   position: absolute;
   right: 20px;
@@ -53,6 +54,8 @@ const ThemeSwitchWrapper = styled('div')`
   top: 32px;
   right: 18px;
   cursor: pointer;
+  z-index: 4;
+  transform: scale(.8);
 `
 
 const IconWrapper = styled('div')`
@@ -63,12 +66,16 @@ const IconWrapper = styled('div')`
   flex-direction: row;
   z-index: 3;
   margin-bottom: 4rem;
-
   position: absolute;
   width: 100%;
   top: 30px;
+  transform: scale(1);
 
-  @media (min-width: 768px) {
+  @media (max-width: 678px) {
+    transform: scale(.7);
+  }
+
+  @media only screen and (min-width: 768px) {
     position: absolute;
     flex-direction: column;
     margin-bottom: 0;
@@ -84,7 +91,7 @@ const IconBox = styled('div')`
   padding: 12px;
   background: transparent;
   border-radius: 100%;
-  border: 4px solid var(--font-color);
+  border: var(--border-width) solid var(--font-color);
   margin: 0 15px;
   cursor: pointer;
   position: relative;
@@ -99,14 +106,15 @@ const IconBox = styled('div')`
     display: inline-block;
     width: 100%;
     height: 100%;
+
     &:hover {
       background: orange;
     }
   }
 `
 
-const SectionHero = props => {
-  let { calculate } = props
+const SectionHero = ({ calculate }) => {
+  let [html, setHtml] = useState('');
 
   function onScrollTo() {
     const about = document.querySelector('.section-about')
@@ -119,8 +127,10 @@ const SectionHero = props => {
   }
 
   function toggleDarkTheme() {
-    const html = document.documentElement.getAttribute('data-theme');
+    html = document.documentElement.getAttribute('data-theme');
+    console.log(html)
     html ? document.documentElement.removeAttribute('data-theme') : document.documentElement.setAttribute('data-theme', 'dark');
+    setHtml(html)
   }
 
   return (
@@ -153,7 +163,9 @@ const SectionHero = props => {
           <IconArrowDown/>
         </GoDown>
         <ThemeSwitchWrapper onClick={toggleDarkTheme}>
-          <IconDark width="50"/>
+          {
+            !!html ? <IconDark width="50"/> : <IconDay width="50"/>
+          }
         </ThemeSwitchWrapper>
     </Container>
   )

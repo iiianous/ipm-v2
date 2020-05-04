@@ -22,4 +22,4 @@ const SubHead = styled.h1`
   }
 `;
 
-export default SubHead
+export default SubHead;

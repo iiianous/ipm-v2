@@ -82,4 +82,4 @@ const SectionWork = () => {
   )
 }
 
-export default SectionWork
+export default SectionWork;

@@ -15,4 +15,4 @@ const Text = styled('p')`
     }
 `
 
-export default Text
+export default Text;

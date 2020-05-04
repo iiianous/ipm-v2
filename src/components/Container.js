@@ -7,4 +7,4 @@ const Container = styled.section`
   justify-content: center;
 `;
 
-export default Container
+export default Container;

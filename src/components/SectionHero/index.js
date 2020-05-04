@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import styled, { css } from 'styled-components'
+import React, { useState, useEffect } from 'react';
+import styled, { css } from 'styled-components';
 
-import { ReactComponent as IconTwitter } from 'assets/images/twitter.svg'
-import { ReactComponent as IconLinkedIn } from 'assets/images/linkedin.svg'
-import { ReactComponent as IconEmail } from 'assets/images/email.svg'
-import { ReactComponent as IconArrowDown } from 'assets/images/arrow_down.svg'
-import { ReactComponent as IconDark } from 'assets/images/dark.svg'
-import { ReactComponent as IconDay } from 'assets/images/day.svg'
-import BigHeader from '../BigHeader'
+import { ReactComponent as IconTwitter } from 'assets/images/twitter.svg';
+import { ReactComponent as IconLinkedIn } from 'assets/images/linkedin.svg';
+import { ReactComponent as IconEmail } from 'assets/images/email.svg';
+import { ReactComponent as IconArrowDown } from 'assets/images/arrow_down.svg';
+import { ReactComponent as IconDark } from 'assets/images/dark.svg';
+import { ReactComponent as IconDay } from 'assets/images/day.svg';
+import BigHeader from '../BigHeader';
 
 const Container = styled('div')`
   display: flex;
@@ -45,7 +45,6 @@ const GoDown = styled('div')`
   svg {
     position: relative;
     top: 2px;
-
   }
 `
 
@@ -114,27 +113,38 @@ const IconBox = styled('div')`
 `
 
 const SectionHero = ({ calculate }) => {
-  let [html, setHtml] = useState('');
+  const checkTheme = () => localStorage.getItem('theme');
+  let [theme, setTheme] = useState(checkTheme);
+
+  useEffect(() => {
+    if (!!theme)
+      document.documentElement.setAttribute('data-theme', 'dark');
+  }, [theme]);
 
   function onScrollTo() {
-    const about = document.querySelector('.section-about')
+    const about = document.querySelector(`[data-js="about"]`);
 
     window.scroll({
       top: about.offsetHeight,
       left: 0,
       behavior: 'smooth'
-    })
+    });
   }
 
   function toggleDarkTheme() {
-    html = document.documentElement.getAttribute('data-theme');
-    console.log(html)
-    html ? document.documentElement.removeAttribute('data-theme') : document.documentElement.setAttribute('data-theme', 'dark');
-    setHtml(html)
+    if (!theme) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
+      setTheme('dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', '');
+      setTheme('');
+      localStorage.setItem('theme', '');
+    }
   }
 
   return (
-    <Container className="section-about">
+    <Container data-js="about" className="section-about">
       <IconWrapper>
         <a href="//twitter.com/iiianous" target="_blank" alt="Twitter" rel="noopener noreferrer">
           <IconBox>
@@ -164,11 +174,11 @@ const SectionHero = ({ calculate }) => {
         </GoDown>
         <ThemeSwitchWrapper onClick={toggleDarkTheme}>
           {
-            !!html ? <IconDark width="50"/> : <IconDay width="50"/>
+            !theme ? <IconDark width="50"/> : <IconDay width="50"/>
           }
         </ThemeSwitchWrapper>
     </Container>
   )
 }
 
-export default SectionHero
+export default SectionHero;

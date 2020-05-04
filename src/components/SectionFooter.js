@@ -63,6 +63,7 @@ const IconBox = styled('div')`
 `
 
 const SectionFooter = () => {
+    const year = new Date().getFullYear()
     return (
         <Container>
             <IconWrapper>
@@ -77,7 +78,7 @@ const SectionFooter = () => {
                     </IconBox>
                 </a>
             </IconWrapper>
-            <p>Las Islas Filipinas. <br />© 2020</p>
+    <p>Las Islas Filipinas. <br />© {year}</p>
             <div className="lining"></div>
         </Container>
     );

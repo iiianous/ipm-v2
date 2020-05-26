@@ -30,7 +30,7 @@ function App() {
 
 	return (
 		<div style={overflow}>
-			<Suspense fallback={renderLoader}>
+			<Suspense fallback={renderLoader()}>
 				<SectionHero calculate={calculate} />
 				<SectionAbout />
 				<SectionWork />

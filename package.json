@@ -11,8 +11,8 @@
 		"webpack": "4.29.6"
 	},
 	"scripts": {
-		"dev": "node server/server.js",
-		"start": "react-scripts start",
+		"start": "node server/server.js",
+		"dev": "react-scripts start",
 		"build": "react-scripts build NODE_ENV=production"
 	},
 	"eslintConfig": {

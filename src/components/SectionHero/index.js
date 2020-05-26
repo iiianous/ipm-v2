@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled, { css } from "styled-components";
 
 import { ReactComponent as IconTwitter } from "assets/images/twitter.svg";
@@ -116,17 +116,16 @@ const IconBox = styled("div")`
 
 const SectionHero = ({ calculate }) => {
 	const checkTheme = () => localStorage.getItem("theme");
-	let [theme, setTheme] = useState(checkTheme);
+	const [theme, setTheme] = useState(checkTheme);
+	let aboutRef = useRef(null);
 
 	useEffect(() => {
 		if (!!theme) document.documentElement.setAttribute("data-theme", "dark");
 	}, [theme]);
 
 	function onScrollTo() {
-		const about = document.querySelector(`[data-js="about"]`);
-
 		window.scroll({
-			top: about.offsetHeight,
+			top: aboutRef.current.offsetHeight,
 			left: 0,
 			behavior: "smooth",
 		});
@@ -145,7 +144,7 @@ const SectionHero = ({ calculate }) => {
 	}
 
 	return (
-		<Container>
+		<Container ref={aboutRef}>
 			<IconWrapper>
 				<a
 					href="//twitter.com/iiianous"

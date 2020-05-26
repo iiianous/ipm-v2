@@ -10,7 +10,7 @@ const BigHeader = styled("h1")`
 	align-self: center;
 	letter-spacing: -0.02em;
 	text-transform: uppercase;
-	top: -9px;
+	top: -1px;
 	position: relative;
 	color: var(--font-color);
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
+import Loader from "./elements/Loader";
 
 const SectionHero = lazy(() => import("components/SectionHero"));
 const SectionWork = lazy(() => import("components/SectionWork"));
@@ -26,11 +27,9 @@ function App() {
 		overflow: "hidden",
 	};
 
-	const renderLoader = () => <p>Loading</p>;
-
 	return (
 		<div style={overflow}>
-			<Suspense fallback={renderLoader()}>
+			<Suspense fallback={Loader()}>
 				<SectionHero calculate={calculate} />
 				<SectionAbout />
 				<SectionWork />

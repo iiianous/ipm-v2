@@ -1,0 +1,2 @@
+:root{--primary-color:#fff;--highlight-color:#f3dc1d;--font-color:#131313;--link-color:#759bec;--border-width:2px}[data-theme=dark]{--primary-color:#16161e;--highlight-color:#1a1b26;--font-color:#0eb0cd;--link-color:#7aa2f7}body{background-color:#fff;background-color:var(--primary-color)}a{color:#759bec;color:var(--link-color)}
+/*# sourceMappingURL=main.e61e5aca.chunk.css.map */

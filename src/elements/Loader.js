@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 const spinThat = keyframes`
   0% { transform: rotate(0) }
-  100% { transform: rotate(360deg)
+  100% { transform: rotate(360deg) }
 `;
 
 const Wrapper = styled("div")`
@@ -67,7 +67,7 @@ const Wrapper = styled("div")`
 		position: relative;
 		transform: translateZ(0) scale(1);
 		backface-visibility: hidden;
-		transform-origin: 0 0; /* see note above */
+		transform-origin: 0 0;
 	}
 `;
 

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
-import Loader from "./elements/Loader";
+import Loader from "../../components/Loader";
 
-const SectionHero = lazy(() => import("components/SectionHero"));
-const SectionWork = lazy(() => import("components/SectionWork"));
-const SectionAbout = lazy(() => import("components/SectionAbout"));
-const SectionFooter = lazy(() => import("components/SectionFooter"));
+const SectionHero = lazy(() => import("components/Hero"));
+const SectionWork = lazy(() => import("components/Work"));
+const SectionAbout = lazy(() => import("components/About"));
+const SectionFooter = lazy(() => import("components/Footer"));
 
 function App() {
 	const [calculate, setCalculate] = useState(0);

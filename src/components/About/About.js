@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-import SubHead from "./SubHead";
-import Text from "./Text";
+import SubHead from "../SubHead";
+import Text from "../Text";
 
 const Container = styled("div")`
 	display: flex;

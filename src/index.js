@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
-import "./Styles.css";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import Frontpage from "./page/Frontpage/Frontpage";
+import "./page/Frontpage/theme.css";
+
+ReactDOM.render(<Frontpage />, document.getElementById("root"));

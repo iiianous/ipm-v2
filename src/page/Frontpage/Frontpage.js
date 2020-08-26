@@ -17,7 +17,9 @@ function App() {
 		window.addEventListener("scroll", () => {
 			let calc;
 
-			if (window.scrollY < 600) calc = window.scrollY / 10.2 + `%`;
+			if (window.scrollY < 600) {
+				calc = window.scrollY / 10.2 + `%`;
+			}
 
 			setCalculate(calc);
 		});

@@ -41,7 +41,22 @@ const SectionAbout = () => {
 				creating small business websites using custom Wordpress CMS.
 				<br />
 				<br />I work with a team developing various types of web applications
-				such as HR management, credential certificates and betting platforms.
+				such as{" "}
+				<a href="//www.rallyhr.com/" target="_blank" rel="noopener noreferrer">
+					HR management
+				</a>
+				,{" "}
+				<a href="//www.aversafe.com/" target="_blank" rel="noopener noreferrer">
+					credential verification certificate
+				</a>{" "}
+				and{" "}
+				<a
+					href="//www.betprophet.co/"
+					target="_blank"
+					rel="noopener noreferrer"
+				>
+					betting platform.
+				</a>
 				{/*<a href={pdf_src} target="_blank">[resume]</a>*/}
 				<br />
 				<br />
